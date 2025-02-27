@@ -1,0 +1,11 @@
+.headerContainer {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(187, 185, 185, 0.605);
+  border-radius: 15px;
+  margin: 10px;
+}
+.header {
+  margin: auto 0;
+}
