@@ -3,6 +3,7 @@ import { Response } from "../types";
 
 export function useFetchData(request:string){
     const [data, setData] = useState<null | Response>(null);
+    const [loading, setLoading] = useState<null | boolean>(true);
     const url = import.meta.env.VITE_API_URL + request + "?language=ru-RU";
     
     const auth = import.meta.env.VITE_AUTH;
@@ -20,8 +21,10 @@ export function useFetchData(request:string){
         const res = await fetch(url, options);
         const data: Response = await res.json();
         setData(data);
+        setLoading(false);
       }
       fetchData();
+      
     }, []);
-  return data
+  return {data, loading}
 }
