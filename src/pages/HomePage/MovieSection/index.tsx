@@ -1,9 +1,10 @@
 import { useFetchData } from "../../../hooks/useFetchData";
 import CardCarousel from "../CardCarousel";
 import PosterCard from "../../../components/PosterCard";
+import { MovieResponse } from "../../../types/MovieTypes";
 
 export default function MovieSection({ request }: { request: string }) {
-  const { data, loading } = useFetchData(`/movie/${request}`);
+  const { data, loading } = useFetchData<MovieResponse>(`/movie/${request}`);
   return (
     <div>
       <CardCarousel>
