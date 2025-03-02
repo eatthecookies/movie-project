@@ -127,3 +127,6 @@ table {
   font-family: "Geologica", sans-serif;
   font-size: 18px;
 }
+a {
+  text-decoration: none;
+}
