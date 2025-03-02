@@ -2,10 +2,31 @@
   height: 70px;
   display: flex;
   justify-content: center;
-  background-color: rgba(187, 185, 185, 0.605);
+  background-color: rgb(215, 237, 248);
   border-radius: 15px;
-  margin: 10px;
+  align-items: center;
+  padding: 10px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.header {
-  margin: auto 0;
+
+.logo {
+  justify-self: flex-start;
+  color: rgb(67, 120, 241);
+  font-size: 56px;
+  font-weight: 800;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1) skew(-18deg, 0deg);
+}
+
+.links {
+  gap: 40px;
+  margin: 0 170px;
+  margin-right: auto;
+  display: flex;
+  font-size: 23px;
 }
