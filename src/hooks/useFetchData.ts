@@ -1,30 +1,35 @@
 import { useEffect, useState } from "react";
-import { Response } from "../types";
 
-export function useFetchData(request:string){
-    const [data, setData] = useState<null | Response>(null);
-    const [loading, setLoading] = useState<null | boolean>(true);
-    const url = import.meta.env.VITE_API_URL + request + "?language=ru-RU";
-    
-    const auth = import.meta.env.VITE_AUTH;
+export function useFetchData<T>(request: string) {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
   
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization: auth,
-      },
-    };
-  
-    useEffect(() => {
-      async function fetchData() {
+  const url = import.meta.env.VITE_API_URL + request + "?language=ru-RU";
+  const auth = import.meta.env.VITE_AUTH;
+
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization: auth,
+    },
+  };
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
         const res = await fetch(url, options);
-        const data: Response = await res.json();
-        setData(data);
+        const jsonData: T = await res.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
+      } finally {
         setLoading(false);
       }
-      fetchData();
-      
-    }, []);
-  return {data, loading}
+    }
+
+    fetchData();
+  }); 
+
+  return { data, loading };
 }
