@@ -1,0 +1,28 @@
+.actorImg {
+  object-fit: cover;
+  width: 140px;
+  height: 140px;
+  border-radius: 63px;
+}
+
+.actorName {
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s ease;
+  font-weight: 400;
+  display: block;
+  color: inherit;
+}
+.actorCard {
+  position: relative;
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+.actorCard:hover {
+  transform: translateY(-14px);
+}
+.actorCard:hover .actorName {
+  opacity: 1;
+}
