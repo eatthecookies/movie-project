@@ -9,7 +9,7 @@ export default function PosterCard({ movie }: { movie: Result }) {
       <div key={movie.id}>
         <img
           className={styles.posterCard}
-          src={imageUrl + movie.poster_path}
+          src={imageUrl + "/w500" + movie.poster_path}
         ></img>
       </div>
     </Link>
