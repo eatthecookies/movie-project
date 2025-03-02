@@ -1,5 +1,25 @@
 .carousel {
   overflow-x: scroll;
-  gap: 10px;
+  gap: 15px;
   display: flex;
+  padding: 30px;
+  overflow-y: hidden;
+  box-shadow: 0px -1px 52px -7px rgba(24, 24, 24, 0.42) inset;
+  margin-bottom: 30px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 10px;
+  background: #ececec00;
+  transition: 0.4s;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #ececec00;
+  border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 8px;
 }
