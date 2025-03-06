@@ -1,35 +1,27 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
-export function useFetchData<T>(request: string) {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  
-  const url = import.meta.env.VITE_API_URL + request + "?language=ru-RU";
+async function fetchData<T>(request: string): Promise<T> {
+  const url = import.meta.env.VITE_API_URL + request;
   const auth = import.meta.env.VITE_AUTH;
 
   const options = {
-    method: "GET",
     headers: {
       accept: "application/json",
       Authorization: auth,
     },
+    params: {
+      language: "ru-RU",
+    },
   };
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await fetch(url, options);
-        const jsonData: T = await res.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error("Ошибка при загрузке данных:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
+  const { data } = await axios.get<T>(url, options);
+  return data;
+}
 
-    fetchData();
-  }); 
-
-  return { data, loading };
+export function useFetchData<T>(request: string) {
+  return useQuery<T>({
+    queryKey: [request], 
+    queryFn: () => fetchData<T>(request), 
+  });
 }
