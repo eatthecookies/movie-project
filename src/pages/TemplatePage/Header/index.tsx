@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import styles from "./Header.module.css";
+import SearchBar from "../../../components/SearchBar";
 type Menu = {
   [key: string]: string;
 };
@@ -14,6 +15,7 @@ export default function Header() {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logo}>КиноХаос</div>
+      <SearchBar />{" "}
       <div className={styles.links}>
         {Object.keys(menu).map((item) => (
           <Link to={menu[item]} key={item} className={styles.link}>
@@ -21,9 +23,7 @@ export default function Header() {
           </Link>
         ))}
       </div>
-      <input></input>
-      <button>Найти</button>
-      <button> Темная тема</button>
+      <button>Темная тема</button>
     </div>
   );
 }
