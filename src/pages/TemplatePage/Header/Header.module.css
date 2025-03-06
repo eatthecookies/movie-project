@@ -3,12 +3,11 @@
   display: flex;
   color: rgb(6, 63, 195);
   justify-content: space-between;
-  background-color: rgb(215, 237, 248);
+  background-color: aliceblue;
   border-radius: 15px;
   align-items: center;
   padding: 10px 30px;
-  /* max-width: 1400px; */
-  margin: 0 auto;
+  margin: 10px 20px;
 }
 
 .logo {
