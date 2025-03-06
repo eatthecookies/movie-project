@@ -14,8 +14,11 @@ export default function Header() {
   };
   return (
     <div className={styles.headerContainer}>
-      <div className={styles.logo}>КиноХаос</div>
-      <SearchBar />{" "}
+      <Link to="/">
+        <div className={styles.logo}>КиноХаос</div>
+      </Link>
+
+      <SearchBar />
       <div className={styles.links}>
         {Object.keys(menu).map((item) => (
           <Link to={menu[item]} key={item} className={styles.link}>

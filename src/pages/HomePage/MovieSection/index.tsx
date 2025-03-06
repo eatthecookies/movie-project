@@ -4,14 +4,13 @@ import PosterCard from "../../../components/PosterCard";
 import { MovieResponse } from "../../../types/MovieTypes";
 
 export default function MovieSection({ request }: { request: string }) {
-  const { data, loading } = useFetchData<MovieResponse>(`/movie/${request}`);
+  const { data } = useFetchData<MovieResponse>(`/movie/${request}`);
   return (
     <div>
       <CardCarousel>
-        {loading && "Данные скоро появятся"}
-        {!loading &&
-          data &&
-          data.results.map((val) => <PosterCard key={val.id} movie={val} />)}
+        {!data
+          ? "Данные скоро появятся"
+          : data.results.map((val) => <PosterCard key={val.id} movie={val} />)}
       </CardCarousel>
     </div>
   );
