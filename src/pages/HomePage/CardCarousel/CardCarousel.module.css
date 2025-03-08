@@ -2,25 +2,25 @@
   overflow-x: scroll;
   gap: 15px;
   display: flex;
-  padding: 30px;
+  padding: 10px 0 30px 0;
   overflow-y: hidden;
-  box-shadow: 0px -1px 52px -7px rgba(24, 24, 24, 0.42) inset;
+  /* box-shadow: 0px -1px 52px -7px rgba(24, 24, 24, 0.42) inset; */
   margin-bottom: 30px;
   border-radius: 20px;
 }
 
 .carousel::-webkit-scrollbar {
-  height: 10px;
-  background: #ececec00;
+  height: 13px;
+  background: #03ccda00;
   transition: 0.4s;
 }
 
 .carousel::-webkit-scrollbar-track {
-  background: #ececec00;
+  background: #a50f0f00;
   border-radius: 10px;
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
+  background: #6395eb9a;
   border-radius: 8px;
 }

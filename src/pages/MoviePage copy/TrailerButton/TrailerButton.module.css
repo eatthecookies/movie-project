@@ -1,0 +1,10 @@
+.trailerButton {
+  display: block;
+  /* height: 20px; */
+  width: fit-content;
+  background-color: rgb(48, 116, 216);
+  color: white;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 80px;
+}

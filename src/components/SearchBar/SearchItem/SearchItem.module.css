@@ -1,0 +1,24 @@
+.itemContainer {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  box-shadow: 3px 9px 23px -18px rgba(66, 68, 90, 1);
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  gap: 20px;
+  height: 80px;
+  /* box-shadow: 2px 3px 3px; */
+  transition: 0.3s ease;
+}
+.itemContainer:hover {
+  background-color: rgb(200, 230, 255);
+}
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.overview {
+  line-height: 1.1;
+  color: rgb(54, 54, 54);
+}

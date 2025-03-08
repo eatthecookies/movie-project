@@ -1,8 +1,11 @@
+import { Cast } from "./MovieTypes"
+
 export interface ActorResponse {
     page: number
     results: ActorResult[]
     total_pages: number
     total_results: number
+    cast: Cast[]
   }
   
   export interface ActorResult {

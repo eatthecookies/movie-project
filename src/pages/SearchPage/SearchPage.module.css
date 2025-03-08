@@ -1,0 +1,36 @@
+.container {
+  /* margin: 20px; */
+  width: 1000px;
+  margin: 0 auto;
+}
+.searchItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.searchContainer {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+}
+.searchBar {
+  font-size: inherit;
+  padding: 20px 20px;
+  width: 90%;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  margin: 20px 0;
+}
+.searchButton {
+  border: none;
+  font-size: inherit;
+  border-radius: 20px;
+  /* font-size: px; */
+  background-color: rgb(77, 142, 246);
+  color: aliceblue;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 20px 0;
+}

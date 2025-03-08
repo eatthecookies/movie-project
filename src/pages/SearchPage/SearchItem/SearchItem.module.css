@@ -1,0 +1,17 @@
+.itemContainer {
+  border-radius: 20px;
+  padding: 20px 30px;
+  background-color: aliceblue;
+  max-width: 1000px;
+  display: flex;
+  gap: 20px;
+}
+.title {
+  margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.overview {
+  line-height: 1.3;
+  color: rgb(54, 54, 54);
+}

@@ -2,12 +2,21 @@
   height: 70px;
   display: flex;
   color: rgb(6, 63, 195);
-  justify-content: space-between;
   background-color: aliceblue;
   border-radius: 15px;
   align-items: center;
   padding: 10px 30px;
   margin: 10px 20px;
+  box-shadow: 3px 9px 23px -18px rgba(66, 68, 90, 1);
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .headerContainer {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -21,12 +30,4 @@
 
 .logo:hover {
   transform: scale(1) skew(-18deg, 0deg);
-}
-
-.links {
-  gap: 30px;
-  /* margin: 0 170px; */
-  /* margin-right: auto; */
-  display: flex;
-  font-size: 23px;
 }

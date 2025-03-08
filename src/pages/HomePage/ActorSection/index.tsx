@@ -4,12 +4,11 @@ import { ActorResponse } from "../../../types/ActorTypes";
 import CardCarousel from "../CardCarousel";
 
 export default function ActorSection() {
-  const { data, loading } = useFetchData<ActorResponse>("/person/popular");
+  const { data } = useFetchData<ActorResponse>("/person/popular");
   return (
     <div>
       <CardCarousel>
-        {!loading &&
-          data &&
+        {data &&
           data.results.map((actor) => <ActorCard actor={actor}></ActorCard>)}
       </CardCarousel>
     </div>

@@ -2,9 +2,12 @@
   height: 70px;
   display: flex;
   justify-content: center;
-  background-color: rgba(187, 185, 185, 0.605);
+  background-color: aliceblue;
   border-radius: 15px;
-  margin: 10px 20px;
+  color: cornflowerblue;
+  bottom: 0;
+  position: relative;
+  /* margin: 10px 20px; */
 }
 .footer {
   margin: auto 0;

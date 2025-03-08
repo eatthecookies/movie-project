@@ -1,7 +1,7 @@
 .movieContainer {
   background-color: white;
   max-width: 1440px;
-  padding: 60px 80px;
+  padding: 60px 70px;
   margin: 20px auto;
   border-radius: 60px;
 }
@@ -17,7 +17,7 @@
   margin: 30px;
 }
 .poster {
-  border-radius: 3px;
+  border-radius: 20px;
   height: 600px;
 }
 .title {
