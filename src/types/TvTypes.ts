@@ -106,6 +106,7 @@ export interface TvResponse {
   
   export interface Cast {
     adult: boolean
+    name:string
     backdrop_path?: string
     genre_ids: number[]
     id: number
