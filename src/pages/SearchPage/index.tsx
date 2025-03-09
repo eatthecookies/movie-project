@@ -59,7 +59,9 @@ export default function SearchPage() {
 
       <div className={styles.searchItems}>
         {data &&
-          data.results.map((item) => <SearchItem item={item}></SearchItem>)}
+          data.results.map((item) => (
+            <SearchItem key={item.id} item={item}></SearchItem>
+          ))}
       </div>
     </div>
   );

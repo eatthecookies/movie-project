@@ -10,6 +10,7 @@ export default function SearchItem({ item }: { item: Result }) {
     <Link to={"/" + item.media_type + "/" + item.id}>
       <div className={styles.itemContainer}>
         <img src={url} alt="" />
+
         <div>
           <p className={styles.title}>{item.title || item.name}</p>
           <p>{item.vote_average}</p>

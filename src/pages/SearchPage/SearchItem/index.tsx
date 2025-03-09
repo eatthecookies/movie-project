@@ -14,7 +14,7 @@ export default function SearchItem({ item }: { item: Result }) {
   return (
     <Link to={"/" + item.media_type + "/" + item.id}>
       <div className={styles.itemContainer}>
-        <img src={url} alt="" />
+        <img src={url} className={styles.img} alt="" />
         <div>
           <p className={styles.title}>{item.title || item.name}</p>
           <p className={styles.overview}>{truncate(item.overview, 400)}</p>

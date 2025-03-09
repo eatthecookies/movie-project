@@ -1,11 +1,11 @@
 import { Link } from "react-router";
-import styles from "./PosterCard.module.css";
+import styles from "./TvCard.module.css";
 import { Cast } from "../../types/TvTypes";
 export default function TvCard({ movie }: { movie: Cast }) {
   const imageUrl = import.meta.env.VITE_API_IMAGE_URL;
 
   return (
-    <Link to={`/movie/${movie.id}`}>
+    <Link to={`/tv/${movie.id}`}>
       <div className={styles.card} key={movie.id}>
         {movie.poster_path ? (
           <img
@@ -19,7 +19,7 @@ export default function TvCard({ movie }: { movie: Cast }) {
           />
         )}
         <div className={styles.overlay}>
-          <p className={styles.movieTitle}>{movie.title}</p>
+          <p className={styles.movieTitle}>{movie.name}</p>
         </div>
       </div>
     </Link>
