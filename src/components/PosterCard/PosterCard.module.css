@@ -49,3 +49,14 @@
   text-align: center;
   font-weight: bold;
 }
+
+@media (max-width: 500px) {
+  .posterCard {
+    height: 250px;
+    width: 180px;
+  }
+  .card {
+    height: 250px;
+    width: 180px;
+  }
+}
