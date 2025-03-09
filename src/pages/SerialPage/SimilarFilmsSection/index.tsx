@@ -1,6 +1,6 @@
 import PosterCard from "../../../components/PosterCard";
 import { useFetchData } from "../../../hooks/useFetchData";
-import { MovieResponse, MovieResult } from "../../../types/MovieTypes";
+import { MovieResponse } from "../../../types/MovieTypes";
 import CardCarousel from "../../HomePage/CardCarousel";
 import styles from "../MoviePage.module.css";
 export default function SimilarFilmsSection({ movieId }: { movieId: number }) {
@@ -13,7 +13,7 @@ export default function SimilarFilmsSection({ movieId }: { movieId: number }) {
       <div>
         <h2 className={styles.actorTitle}>Похожие</h2>
         <CardCarousel>
-          {data.results.map((item: MovieResult, index) => (
+          {data.results.map((item, index) => (
             <PosterCard key={index} movie={item}></PosterCard>
           ))}
         </CardCarousel>

@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import TemplatePage from "./pages/TemplatePage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import PersonPage from "./pages/PersonPage";
+import SerialPage from "./pages/SerialPage";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<TemplatePage />}>
             <Route path="" element={<HomePage />} />
             <Route path="/movie/:id" element={<MoviePage />} />
+            <Route path="/tv/:id" element={<SerialPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/person/:id" element={<PersonPage />} />
           </Route>

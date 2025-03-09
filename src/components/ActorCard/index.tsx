@@ -1,8 +1,9 @@
 import { Link } from "react-router";
-import { ActorResult } from "../../types/ActorTypes";
 import styles from "./ActorCard.module.css";
+import { ActorResult } from "../../types/ActorTypes";
+import { Cast } from "../../types/MovieTypes";
 
-export default function ActorCard({ actor }: { actor: ActorResult }) {
+export default function ActorCard({ actor }: { actor: ActorResult | Cast }) {
   const imageUrl = import.meta.env.VITE_API_IMAGE_URL;
 
   return (

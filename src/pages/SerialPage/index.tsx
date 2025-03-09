@@ -4,13 +4,11 @@ import { MovieResult } from "../../types/MovieTypes";
 import styles from "./MoviePage.module.css";
 import TrailerButton from "./TrailerButton";
 import AboutSection from "./AboutSection";
-import CreditsSection from "./CreditsSection";
-import SimilarFilmsSection from "./SimilarFilmsSection";
 
-export default function MoviePage() {
+export default function SerialPage() {
   const params = useParams();
   const imageUrl = import.meta.env.VITE_API_IMAGE_URL;
-  const { data } = useFetchData<MovieResult>("/movie/" + params.id);
+  const { data } = useFetchData<MovieResult>("/tv/" + params.id);
 
   if (data) {
     return (
@@ -33,21 +31,19 @@ export default function MoviePage() {
           </div>
           <div>
             <h1 className={styles.title}>
-              {data.title} ({data.release_date.slice(0, 4)})
+              {data.name} ({data.first_air_date.slice(0, 4)})
             </h1>
             <p className={styles.primary}>
               {data.tagline || data.original_title}
             </p>
             <div className={styles.aboutSection}>
-              <h2 className={styles.aboutTitle}>О фильме</h2>
+              <h2 className={styles.aboutTitle}>О сериале</h2>
               <AboutSection data={data} />
               <h2 className={styles.aboutTitle}>Описание</h2>
               <p className={styles.overview}>{data.overview}</p>
             </div>
           </div>
         </div>
-        <CreditsSection movieId={data.id} />
-        <SimilarFilmsSection movieId={data.id} />
       </div>
     );
   }

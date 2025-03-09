@@ -11,7 +11,7 @@ export default function CreditsSection({ movieId }: { movieId: number }) {
       <div>
         <h2 className={styles.actorTitle}>Актеры</h2>
         <CardCarousel>
-          {data.cast.map((item: ActorResult, index) => (
+          {data.cast.map((item, index) => (
             <ActorCard key={index} actor={item}></ActorCard>
           ))}
         </CardCarousel>

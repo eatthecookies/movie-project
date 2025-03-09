@@ -12,7 +12,7 @@ export default function FilmsSection({ actorId }: { actorId: number }) {
     return (
       <div>
         <CardCarousel>
-          {data.cast.map((item: MovieResult, index) => (
+          {data.cast.map((item, index) => (
             <PosterCard key={index} movie={item}></PosterCard>
           ))}
         </CardCarousel>

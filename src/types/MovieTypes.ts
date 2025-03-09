@@ -12,6 +12,7 @@ export interface Dates {
 }
 
 export interface MovieResult {
+  first_air_date: string
   key?:string;
     name:string
     adult: boolean
@@ -43,6 +44,9 @@ export interface MovieResult {
     cast: Cast[]
 }
 export interface Cast {
+  
+  profile_path:string
+  name:string
   adult: boolean
   backdrop_path?: string
   genre_ids: number[]

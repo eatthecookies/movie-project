@@ -9,6 +9,9 @@ export interface ActorResponse {
   }
   
   export interface ActorResult {
+    biography:string
+    place_of_birth:string
+    cast: Cast[]
     adult: boolean
     gender: number
     id: number
